@@ -12,11 +12,11 @@ def asset(selected_option):
     latest_price = gold['Close'].iloc[-1]
     return latest_price
 
-asset=asset(selected_option)
 while True:
     if button:
+        asset=asset(selected_option)
         st.write(asset)
-        sleep(15)
+
        
 
     
