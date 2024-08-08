@@ -16,6 +16,7 @@ asset=asset(selected_option)
 while True:
     if button:
         st.write(asset)
+        sleep(15)
        
 
     
