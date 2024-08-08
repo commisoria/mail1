@@ -7,14 +7,15 @@ options = ['GC=F', 'BTC-USD', 'PAXG-USD', 'BNB-USD', 'TRY=X']
 selected_option = st.selectbox('Select an option', options)
 button=st.button('Calculate')
 
-if button:
-    def asset(selected_option):
-        gold = yf.download(tickers=selected_option, period="1d", interval="15m")
-        latest_price = gold['Close'].iloc[-1]
-        return latest_price
-    while True:
-        asset=asset(selected_option)
+while True:
+    if button:
+        def asset(selected_option):
+            gold = yf.download(tickers=selected_option, period="1d", interval="15m")
+            latest_price = gold['Close'].iloc[-1]
+            return latest_price
+         asset=asset(selected_option)
         st.write(asset)
+
     
     
 
