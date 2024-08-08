@@ -11,12 +11,10 @@ def asset(selected_option):
     gold = yf.download(tickers=selected_option, period="1d", interval="15m")
     latest_price = gold['Close'].iloc[-1]
     return latest_price
-
-
-    if button:
-        while True:
-            asset=asset(selected_option)
-            st.write(asset)
+if button:
+    while True:
+        asset=asset(selected_option)
+        st.write(asset)
 
        
 
