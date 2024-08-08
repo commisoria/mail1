@@ -12,8 +12,9 @@ if button:
         gold = yf.download(tickers=selected_option, period="1d", interval="15m")
         latest_price = gold['Close'].iloc[-1]
         return latest_price
-    asset=asset(selected_option)
-    st.write(asset)
+    while True:
+        asset=asset(selected_option)
+        st.write(asset)
     
     
 
